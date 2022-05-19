@@ -1,0 +1,79 @@
+main {
+    width: 300px;
+    margin: 0px auto;
+    font-family: calibri;
+}
+.name {
+    font-size: 30px;
+    border-radius: 4px;
+    width: 80%;
+    background-color: #CBEDFF;
+    margin-top: 10px;
+    margin-bottom: 10;
+    padding: 14px;
+}
+
+.all_candidates {
+    font-size: 30px;
+    border-radius: 4px;
+    width: 80%;
+    background-color: #EBDCF9;
+    margin-top: 10px;
+    margin-bottom: 10;
+    padding: 14px;
+}
+
+.search {
+    font-size: 26px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #E1F5EA;
+    margin-top: 10px;
+    margin-bottom: 10;
+    padding: 14px;
+}
+
+.image {
+    width: 90%;
+    box-shadow: -19px 0 22px -19px #000, 19px 0 22px -19px #000;
+}
+
+.position {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 80%;
+    border-width: 0px;
+    border-radius: 4px;
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.skills {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 80%;
+    border-width: 0px;
+    border-radius: 4px;
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.title_skills {
+    font-size: 26px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: rgba(251, 236, 221, 1);
+    margin-top: 10px;
+    margin-bottom: 10;
+    padding: 14px;
+}
+
+.link {}

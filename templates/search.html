@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск</title>
+</head>
+<body>
+<main>
+    <h1 class="search">Найдено кандидатов {{num}}</h1>
+    {% for candidate in coincidence %}
+    <ul>
+    <li><p><a href="/candidate/{{candidate.id}}">{{candidate.name}}</a></p></li>
+    </ul>
+    {% endfor %}
+</main>
+</body>
+</html>
+
+<link rel="stylesheet", href="{{url_for('static', filename='style.css')}}" />

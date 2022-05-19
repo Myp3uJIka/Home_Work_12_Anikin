@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{candidate.name}}</title>
+</head>
+<body>
+<main>
+    <h1 class="name">{{candidate.name}}</h1>
+    <p class="position">Позиция: {{candidate.position}}</p>
+    <img class="image" src={{candidate.picture}} />
+    <p class="skills">Навыки: {{candidate.skills}}</p>
+</main>
+</body>
+</html>
+
+<link rel="stylesheet", href="{{url_for('static', filename='style.css')}}" />

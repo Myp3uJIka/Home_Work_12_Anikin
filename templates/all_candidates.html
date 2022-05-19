@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все кандидаты</title>
+</head>
+<body>
+<main>
+    <h1 class="all_candidates">Все кандидаты</h1>
+    {% for candidate in candidates %}
+    <ul>
+    <li><p class="link"><a href="/candidate/{{candidate.id}}">{{candidate.name}}</a></p></li>
+    </ul>
+    {% endfor %}
+</main>
+</body>
+</html>
+
+<link rel="stylesheet", href="{{url_for('static', filename='style.css')}}" />
