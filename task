@@ -1,0 +1,159 @@
+Урок 12. Знакомство с Flask, шаблонизацией
+
+**Шаг 0**
+
+Сохраните данные из раскрывашки ниже в JSON файл candidates.json.
+
+- Содержание файла (раскрой меня!)
+    
+    ```python
+    # candidates.json
+    
+    [
+      {
+        "id": 1,
+        "name": "Adela Hendricks",
+        "picture": "https://picsum.photos/200",
+        "position": "Go разработчик",
+        "gender": "female",
+        "age": 40,
+        "skills": "go, python"
+      },
+      {
+        "id": 2,
+        "name": "Sheri Torres",
+        "picture": "https://picsum.photos/200",
+        "position": "Delphi developer",
+        "gender": "female",
+        "age": 26,
+        "skills": "Delphi, pascal, fortran, basic"
+      },
+      {
+        "id": 3,
+        "name": "Burt Stein",
+        "picture": "https://picsum.photos/200",
+        "position": "Team lead",
+        "gender": "male",
+        "age": 33,
+        "skills": "делегирование, пользоваться календарем, обсуждать важные вопросы"
+      },
+      {
+        "id": 4,
+        "name": "Bauer Adkins",
+        "picture": "https://picsum.photos/200",
+        "position": "CTO",
+        "gender": "male",
+        "age": 37,
+        "skills": "very important face"
+      },
+      {
+        "id": 5,
+        "name": "Day Holloway",
+        "picture": "https://picsum.photos/200",
+        "position": "HR manager",
+        "gender": "male",
+        "age": 35,
+        "skills": "LinkedIn, telegram, spam, spam, spam"
+      },
+      {
+        "id": 6,
+        "name": "Austin Cochran",
+        "picture": "https://picsum.photos/200",
+        "position": "python-develop",
+        "gender": "male",
+        "age": 26,
+        "skills": "python, html"
+      },
+      {
+        "id": 7,
+        "name": "Sheree Love",
+        "picture": "https://picsum.photos/200",
+        "position": "Django developer",
+        "gender": "female",
+        "age": 33,
+        "skills": "Python, Django, flask"
+      }
+    ]
+    ```
+    
+
+Импортируйте данные в ваше приложение.
+
+**Создайте файл settings.json c таким содержимым:**
+
+```python
+{"online":true, "case-sensitive": true, "limit":3}
+```
+
+Импортируйте данные в словарь settings.
+
+**Шаг 1**
+
+Создайте представление для роута `/` (главная страница).
+
+В зависимости от settings["online"] выведите:
+
+ `Приложение работает` / `Приложение не работает`
+
+**Шаг 2**
+
+Создайте представление для роута `candidate/<x>`, который бы выводил данные про кандидата так: 
+
+```python
+<h1>Имя кандидата</h1>
+<p>Позиция кандидата</p>
+<img src="(картинка)" width=200/>
+<p>Навыки кандидата</p>
+```
+
+**Шаг 3**
+
+Создайте представление для роута  `/list`.
+
+Выведите список всех кандидатов в формате:
+
+```python
+<h1>Все кандидаты</h1>
+<p><a href="/candidate/<x>">Имя кандидата</a></p>
+<p><a href="/candidate/<x>">Имя кандидата</a></p>
+```
+
+Необходимо сделать так, чтобы ссылки вели на ранее созданные странички кандидатов.
+
+**Шаг 4**
+
+Создайте представление `/search?name=<x>` для поиска по совпадению.
+
+В зависимости от настройки `case-sensitive` учитывайте либо не учитывайте регистр.
+
+Выведите тех кандидатов, в имени у которых содержится `x`.
+
+```python
+<h1>найдено кандидатов 2/h2>
+<p><a href="/candidate/<x>">Имя кандидата</a></p>
+<p><a href="/candidate/<x>">Имя кандидата</a></p>
+```
+
+**Шаг 5**
+
+Создайте представление `/skill/<x>` для поиска по навыкам.
+
+Выведите тех кандидатов, в списке навыков у которых содержится `skill`.
+
+В зависимости от настройки `limit` выводите от одного до всех найденных кандидатов.
+
+```python
+<h1>Найдено со скиллом X: 2/h2>
+<p><a href="/candidate/<x>">Имя кандидата</a></p>
+<p><a href="/candidate/<x>">Имя кандидата</a></p>
+```
+
+Запакуйте файлы main.py, candidates.json, settings.py в архив zip и сдайте его на проверку.
+
+**Критерии выполнения домашнего задания:**
+
+- [ ]  Роуты без параметра применены корректно.
+- [ ]  Роуты с параметром применены корректно.
+- [ ]  Роуты с квери-параметрами применены корректно.
+- [ ]  HTML написан корректно.
+- [ ]  Оформление в HTML сделано корректно.
